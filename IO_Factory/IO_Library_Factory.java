@@ -11,9 +11,14 @@ public class IO_Library_Factory {
      */
     public static void main(String[] args) {
 
-        int numero = IO.introducirInt(IO.CONSOLA, "Introduce un úmero entero");
-        IO.devolver(IO.CONSOLA, numero);
+        IO_Dialogo dialogo1 = IO_Dialogo.crearDialogo(IO_Dialogo.Tipo.CONSOLA);
+        dialogo1.devolver("Hola");
+        dialogo1.devolver(2.0);
+        dialogo1.devolver(2f);
+        dialogo1.devolver(10);
 
+        IO_Dialogo dialogo2 = IO_Dialogo.crearDialogo(IO_Dialogo.Tipo.VENTANA);
+        dialogo2.devolver("Hola");
     }
 
 }
